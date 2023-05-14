@@ -36,7 +36,8 @@ jobs:
           script: |
             const fs = require('fs')
             const data = fs.readFileSync('output.sh', 'utf8')
-            const body = "Hello，您可以直接执行该命令：\n" +
+            const body = "注意这是 Kubernetes + Containerd 版专用\n\n" +
+                "Hello，您可以直接执行该命令：\n" +
                 "\n" +
                 "```shell\n" +
                 "echo -e '" + data.replace(/\n/g, '\\n') + "' | bash\n" +
